@@ -40,6 +40,12 @@
         h2,p{
             text-transform: uppercase;
         }
+        h2{
+            font-size: 22px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
     }
     .education-time{
             display: flex;

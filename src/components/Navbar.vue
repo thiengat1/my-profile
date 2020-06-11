@@ -13,11 +13,11 @@
             <a href=""><h2>ThienNV</h2></a>
         </div>
       <div class="sidebar-menu">
-        <a class="menu-item" href="#home"><img src="../assets/home.png" width="22" height="22"/><span>Home</span></a>
-        <a class="menu-item" href="#about"><img src="../assets/about.jpg" width="22" height="22"/><span>About</span></a>
-        <a class="menu-item" href="#skill"><img src="../assets/skill.png" width="22" height="22"/><span>Skill</span></a>
-         <a class="menu-item" href="#experience"><img src="../assets/experience.png" width="22" height="22"/><span>Experiences</span></a>
-        <a class="menu-item" href="#education"><img src="../assets/education.png" width="22" height="22"/><span>Education</span></a>
+        <a class="menu-item" href="#home"><img src="../assets/home.png" width="20" height="20"/><span>Home</span></a>
+        <a class="menu-item" href="#about"><img src="../assets/about.jpg" width="20" height="20"/><span>About</span></a>
+        <a class="menu-item" href="#skill"><img src="../assets/skill.png" width="20" height="20"/><span>Skill</span></a>
+         <a class="menu-item" href="#experience"><img src="../assets/experience.png" width="20" height="20"/><span>Experiences</span></a>
+        <a class="menu-item" href="#education"><img src="../assets/education.png" width="20" height="20"/><span>Education</span></a>
       </div>
       
     
@@ -36,8 +36,8 @@
  .sidebar{
      background: #2F323A;
      position: fixed;
-     left: -260px;
-     width: 260px;
+     left: -220px;
+     width: 220px;
      height: 100%;
      z-index: 1;
      transition: 0.5s;
@@ -48,14 +48,14 @@
          width: 100%;
          line-height: 60px;
          text-decoration: none;
-         padding-left: 40px;
+         padding-left: 30px;
          box-sizing: border-box;
          border-bottom: 1px solid #3c3c44;
          transition: 0.5s;
          transition-property: background;
         span{
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 14px;
         }
         
 
@@ -66,7 +66,8 @@
 
      }
      h2{
-            font-size: 28px !important;
+            font-size: 22px !important;
+            margin: 0;
         }
  
    
@@ -93,8 +94,8 @@
      left: 0;
      transition: 0.5s;
      #sidebars-button{
-         top:12px;
-         left: 200px;
+         top:6px;
+         left: 160px;
          border: 0;
          transition: 0.5s;
          

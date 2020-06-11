@@ -8,7 +8,7 @@
                 <div class="row">
                      <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 name-designation">
                          <h3 class="designation">frontend developer</h3>
-                         <p class="name-of-org">somi company (philippines)</p>
+                         <p class="name-of-org">SOMI UNLIMITED SOLUTIONS, INC company (philippines)</p>
                      </div>
                      <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2">
                          <div class="stay-time stay-time-color">
@@ -120,7 +120,7 @@
         }
         .name-designation{
             width: 30%;
-            text-align: center;
+            text-align: right;
             padding-right: 45px;
         }
         .designation{
@@ -148,6 +148,12 @@
             top: auto;
             margin: 17px auto;
             }  
+    }
+}
+@media (max-width: 992px)
+    {
+    .name-designation{
+        text-align: center !important;
     }
 }
 .experience:hover{
