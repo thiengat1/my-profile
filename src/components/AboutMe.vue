@@ -37,7 +37,7 @@
                             </li>
                             <li>
                                 <img src="../assets/web.png" width="20" height="20"/>
-                                <a href="https://nguyenvanthien212.herokuapp.com/"><span>https://nguyenvanthien.herokuapp.com</span></a>
+                                <a href="https://nguyenvanthien.herokuapp.com/"><span>https://nguyenvanthien.herokuapp.com</span></a>
                             </li>
                         </ul>
                     </div>
