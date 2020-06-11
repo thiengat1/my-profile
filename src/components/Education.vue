@@ -1,0 +1,77 @@
+<template>
+    <div class="education-detail" id="education">
+        <div class="section-header">
+            <h2>Education</h2>
+        </div>
+        <div class="row education-item">
+             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 education-item-detail">
+                <div class="education-time">   
+                    <p>2006</p>
+                    <p>-</p>
+                    <p>2011</p>
+                </div>
+                <h2>BACHELOR DEGREE</h2>
+                <p>da nang university of technology, viet nam</p>
+                  <hr>
+            </div>
+              
+        </div>
+    
+       
+    </div>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+@import './style.scss';
+.education-item{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    .education-item-detail{
+        text-align: center;
+        padding: 0 30px 30px;
+        background: #fff;
+        h2,p{
+            text-transform: uppercase;
+        }
+    }
+    .education-time{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #c0a9ea;;
+            text-transform: uppercase;
+            border-radius: 50%;
+            border: 10px solid #f1f2f7;
+            height: 140px;
+            width: 140px;
+            text-align: center;
+            position: relative;
+            top:-50px;
+            margin: 0 auto;
+            transition: 0.5s;
+            p{
+                margin: 0;
+                font-size: 18px;
+                color: #fff;
+            }
+    }
+}
+.education-item:hover{
+    .education-time{
+        transition: 0.5s;
+        transform: rotate(-360deg);
+        width: 150px;
+        height: 150px;
+    }
+ 
+}
+
+</style>
