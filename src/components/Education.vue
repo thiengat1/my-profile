@@ -41,10 +41,10 @@
             text-transform: uppercase;
         }
         h2{
-            font-size: 22px !important;
+            font-size: 18px !important;
         }
         p{
-            font-size: 16px !important;
+            font-size: 14px !important;
         }
     }
     .education-time{

@@ -6,7 +6,7 @@
         <div class="about-body-container">
             <div class="row about-body">
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 my-image">
-                    <img src="../assets/myimage.jpg" width="60%" height="60%"/>
+                    <img src="../assets/myimage.jpg" width="50%" height="50%"/>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 my-summary">
                      <div class="summary-detail">

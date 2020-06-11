@@ -6,11 +6,11 @@
         <div class="row experience-detail">
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 experience">
                 <div class="row">
-                     <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 name-designation">
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 name-designation">
                          <h3 class="designation">frontend developer</h3>
                          <p class="name-of-org">SOMI UNLIMITED SOLUTIONS, INC company (philippines)</p>
                      </div>
-                     <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
                          <div class="stay-time stay-time-color">
                             <p>12/2018</p>
                             <p>-</p>
@@ -18,7 +18,7 @@
                          </div>
                          
                      </div>
-                      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 experience-sum">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 experience-sum">
                          <ul>
                              <li v-for="item in experience2" :key="item.id"><span>{{item.title}}</span>{{item.name}}</li>
                          </ul>
@@ -132,7 +132,7 @@
                 text-transform: uppercase;
         }
         .name-of-org{
-                font-size: 16px;
+                font-size: 14px;
                 color: #808080;
                 text-transform: uppercase;
         }
@@ -154,6 +154,7 @@
     {
     .name-designation{
         text-align: center !important;
+        width: 100% !important;
     }
 }
 .experience:hover{
