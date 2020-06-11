@@ -6,7 +6,7 @@
         <div class="about-body-container">
             <div class="row about-body">
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 my-image">
-                    <img src="../assets/myimage.jpg" width="80%" height="80%"/>
+                    <img src="../assets/myimage.jpg" width="60%" height="60%"/>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 my-summary">
                      <div class="summary-detail">
@@ -37,7 +37,7 @@
                             </li>
                             <li>
                                 <img src="../assets/web.png" width="20" height="20"/>
-                                <a href="#"><span>venhadicon.com</span></a>
+                                <a href="https://nguyenvanthien212.herokuapp.com/"><span>https://nguyenvanthien.herokuapp.com</span></a>
                             </li>
                         </ul>
                     </div>
@@ -104,8 +104,8 @@ import axios from 'axios'
             padding: 40px;
             .my-cv{
                 margin-top: 40px;
-                width: 100px;
-                height: 40px;
+                width: 90px;
+                height: 35px;
                 background: #16a085;
                 border-radius: 4px;
                 color: #fff;
@@ -159,7 +159,7 @@ import axios from 'axios'
             }
         }
           h2{
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 400;
                 text-transform: uppercase;
                 color: #32323a;

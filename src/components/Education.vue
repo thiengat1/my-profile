@@ -30,7 +30,7 @@
 <style lang="scss" scoped>
 @import './style.scss';
 .education-item{
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     .education-item-detail{
@@ -50,8 +50,8 @@
             text-transform: uppercase;
             border-radius: 50%;
             border: 10px solid #f1f2f7;
-            height: 140px;
-            width: 140px;
+            height: 120px;
+            width: 120px;
             text-align: center;
             position: relative;
             top:-50px;
@@ -59,7 +59,7 @@
             transition: 0.5s;
             p{
                 margin: 0;
-                font-size: 18px;
+                font-size: 16px;
                 color: #fff;
             }
     }
@@ -68,8 +68,8 @@
     .education-time{
         transition: 0.5s;
         transform: rotate(-360deg);
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
     }
  
 }

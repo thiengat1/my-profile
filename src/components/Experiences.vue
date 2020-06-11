@@ -102,15 +102,15 @@
             text-transform: uppercase;
             border-radius: 50%;
             border: 10px solid #f1f2f7;
-            height: 160px;
-            width: 160px;
+            height: 145px;
+            width: 145px;
             text-align: center;
             top: -60px;
             margin: 17px auto;
             transition: 0.5s;
             p{
                 margin: 0;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 400;
                 color: #fff;
             }
@@ -154,8 +154,8 @@
     .stay-time{
         transition: 0.5s;
         transform: rotate(-360deg);
-        width: 170px;
-        height: 170px;
+        width: 155px;
+        height: 155px;
     }
  
 }

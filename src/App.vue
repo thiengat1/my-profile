@@ -31,13 +31,11 @@ export default {
     font-family: 'Open Sans',sans-serif;
     font-weight: 100;
     color: #8c8c8c;
-    font-size: 16px;
+    font-size: 14px;
        
 }
 body{
    margin: 0;
-     margin-top: 56px;
-  
 }
 html{
   scroll-behavior: smooth;

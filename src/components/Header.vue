@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="social-icon">
-                        <a href="https://mail.google.com/mail/u/0/#inbox">
+                        <a href="https://nguyenvanthien.herokuapp.com/">
                             <img src="../assets/web2.png" width="30" height="30"/>
                             <span>Web</span>
                         </a>
@@ -150,6 +150,24 @@
                 }
         }
     }
+
+    @media (max-width: 992px)
+    {
+        .site-title{
+            h1{
+                font-size: 35px !important;
+            }
+            
+        }
+        .site-slogan{
+            margin-top: 20px !important;
+            h3{
+                font-size: 18px !important; 
+            }
+          
+        }
+    }
     
 }
+
 </style>

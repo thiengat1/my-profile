@@ -55,8 +55,9 @@
          transition-property: background;
         span{
             text-transform: uppercase;
-            font-size: 20px;
+            font-size: 16px;
         }
+        
 
      }
      a:hover{
@@ -64,6 +65,9 @@
         }
 
      }
+     h2{
+            font-size: 28px !important;
+        }
  
    
      .sidebar-header{
