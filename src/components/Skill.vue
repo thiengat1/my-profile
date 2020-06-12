@@ -71,7 +71,7 @@
                 versionControl:[
                     {id:1,name:'Git (Github)'},
                     {id:2,name:'SVN (TortoiseSVN)'},
-                    {id:3,name:'Team Foundation Serve'},
+                    {id:3,name:'Team Foundation Server'},
                 ],
                 ide:[
                     {id:1,name:'phpStorm'},
