@@ -58,20 +58,20 @@
                 ],
                 frameWork:[
                     {id:1,name:'Vue Js/ React Js/ NodeJS'},
-                    {id:2,name:'jQuery / Bootstrap / Materialize CSS'},
+                    {id:2,name:'jQuery / Bootstrap / LayUI'},
                     {id:3,name:'PHP-Yii2'},
                     {id:4,name:'Express JS'},
                     {id:4,name:'React Native'},
                 ],
                 database:[
-                    {id:1,name:'Microsoft SQL'},
-                    {id:2,name:'MySQL'},
-                    {id:3,name:'MongoDB'},
+                    {id:1,name:'MySQL'},
+                    {id:2,name:'MongoDB'},
+                    {id:3,name:'Oracle'},
                 ],
                 versionControl:[
-                    {id:1,name:'Git (Git Shell & Github)'},
-                    {id:2,name:'Team Foundation Serve'},
-                    {id:3,name:'SVN (TortoiseSVN & VisualSVN)'},
+                    {id:1,name:'Git (Github)'},
+                    {id:2,name:'SVN (TortoiseSVN)'},
+                    {id:3,name:'Team Foundation Serve'},
                 ],
                 ide:[
                     {id:1,name:'phpStorm'},

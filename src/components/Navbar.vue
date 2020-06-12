@@ -28,6 +28,7 @@
 
 <script>
     export default {
+     
         
     }
 </script>
@@ -130,4 +131,5 @@
          margin-bottom: 5px;
      }
  }
+
 </style>

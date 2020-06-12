@@ -67,9 +67,9 @@
                    
                 ],
                  experience2:[
-                    {id:1,title:'Project: ',name:'Employment Managemant System'},
+                    {id:1,title:'Project: ',name:'Employment Managemant System.'},
                     {id:2,title:'Project Description: ',name:'Building a staff management system, including employee information management, leave management, work schedule management, financial management, flow management, etc.'},
-                    {id:3,title:'Team Size: ',name:'7'},
+                    {id:3,title:'Team Size: ',name:'7.'},
                     {id:4,title:'Responsiblities: ',name:'Responsible of frondent develop using Vue Js framework to build the assigned modules. Maintain old modules and update new requirements.'},
                     {id:5,title:'Accomplishments: ',name:'Learned  Vue Js Framework, Improved teamwork and communication skills, Learned MVC architectural.'},
                     {id:6,title:'Technologies: ',name:'Frontend: Vue Js, Backend: PHP-Laravel.'},
