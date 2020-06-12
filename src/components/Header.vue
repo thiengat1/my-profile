@@ -133,8 +133,8 @@
              .social-icon:hover{
                  background-color: #ffffff;
                  height: 60px;
-                  width: 60px;
-                transition: width 0.1s;
+                 width: 60px;
+                 transition: width 0.1s;
                 
              }
              .social-icon a span {
@@ -147,6 +147,8 @@
                 opacity: 1;
                 overflow: visible;
                 margin: -50px 0;
+                transition: 0.5s;
+                transition-property: opacity;
                 }
         }
     }
