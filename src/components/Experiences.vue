@@ -62,6 +62,7 @@
 
 <script>
 export default {
+   name:'Experiences',
   data() {
     return {
       experience1: [

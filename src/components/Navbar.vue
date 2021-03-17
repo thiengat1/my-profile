@@ -12,30 +12,10 @@
         <img src="../assets/medium.png" width="38" height="30" />
         <a href=""><h2>ThienNV</h2></a>
       </div>
-      <div class="sidebar-menu">
-        <a class="menu-item" href="#home"
-          ><img src="../assets/home.png" width="20" height="20" /><span
-            >Home</span
-          ></a
-        >
-        <a class="menu-item" href="#about"
-          ><img src="../assets/about.jpg" width="20" height="20" /><span
-            >About</span
-          ></a
-        >
-        <a class="menu-item" href="#skill"
-          ><img src="../assets/skill.png" width="20" height="20" /><span
-            >Skill</span
-          ></a
-        >
-        <a class="menu-item" href="#experience"
-          ><img src="../assets/experience.png" width="20" height="20" /><span
-            >Experiences</span
-          ></a
-        >
-        <a class="menu-item" href="#education"
-          ><img src="../assets/education.png" width="20" height="20" /><span
-            >Education</span
+      <div class="sidebar-menu"> 
+        <a class="menu-item" :href="menu.link" v-for="menu in menuList" :key="menu.id"
+          ><img :src="require(`../assets/${menu.image}${menu.image==='about'?'.jpg':'.png'}`)" width="20" height="20" /><span
+            >{{menu.name}}</span
           ></a
         >
       </div>
@@ -44,7 +24,45 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name:'Navbar',
+  data(){
+    return{
+        menuList: [
+        {
+          id: 1,
+          name: "Home",
+          image: "home",
+          link: "#home",
+        },
+        {
+          id: 2,
+          name: "About",
+          image: "about",
+          link: "#about",
+        },
+        {
+          id: 3,
+          name: "Skill",
+          image: "skill",
+          link: "#skill",
+        },
+        {
+          id: 4,
+          name: "Experience",
+          image: "experience",
+          link: "#experience",
+        },
+         {
+          id: 5,
+          name: "Education",
+          image: "education",
+          link: "#education",
+        },
+      ],
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

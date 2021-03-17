@@ -13,14 +13,25 @@
             <h2>summary</h2>
             <p v-for="item in summary" :key="item.id">{{ item.content }}</p>
 
-            <div class="my-cv">
-              <a :href="`${publicPath}nguyenvanthien_profile.pdf`" download
-                ><img
-                  src="../assets/download.png"
-                  width="30"
-                  height="30"
-                /><span>My cv</span></a
-              >
+            <div style="display:flex">
+              <div class="my-cv english-cv">
+                <a :href="`${publicPath}nguyenvanthien_profile_en.pdf`" download
+                  ><img
+                    src="../assets/download.png"
+                    width="30"
+                    height="30"
+                  /><span>My English CV</span></a
+                >
+              </div>
+              <div class="my-cv chinese-cv">
+                <a :href="`${publicPath}个人简历_阮文善.pdf`" download
+                  ><img
+                    src="../assets/download.png"
+                    width="30"
+                    height="30"
+                  /><span>My Chinese CV</span></a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -28,25 +39,16 @@
           <div class="contact-detail">
             <h2>contact info</h2>
             <ul class="contact-list">
-              <li>
-                <img src="../assets/location.png" width="20" height="20" />
-                <span>Nam Thai-Nam Dan-Nghe an</span>
-              </li>
-              <li>
-                <img src="../assets/phone.png" width="20" height="20" />
-                <span>+84983839572</span>
-              </li>
-              <li>
-                <img src="../assets/mail.png" width="20" height="20" />
-                <a href="https://mail.google.com/mail/u/0/#inbox"
-                  ><span>thiengat1@gmail.com</span></a
-                >
-              </li>
-              <li>
-                <img src="../assets/web.png" width="20" height="20" />
-                <a href="https://nguyenvanthien.herokuapp.com/"
-                  ><span>https://nguyenvanthien.herokuapp.com</span></a
-                >
+              <li v-for="contact in contacts" :key="contact.id">
+                <img
+                  :src="require(`../assets/${contact.image}.png`)"
+                  width="20"
+                  height="20"
+                />
+                <a v-if="contact.link" :href="contact.link">
+                   <span>{{ contact.name }}</span>
+                </a>
+                <span v-else>{{ contact.name }}</span>
               </li>
             </ul>
           </div>
@@ -59,6 +61,7 @@
 <script>
 import axios from "axios";
 export default {
+  name:'AboutMe',
   data() {
     return {
       summary: [
@@ -73,17 +76,44 @@ export default {
             "Learning	new	language and technologies is what I	am passionate about. I am considered a team-player	because	I like to help other and tend to work well within the group.",
         },
         {
-          id: 2,
+          id: 3,
           content:
             "I like Traveling, reading book, playing football and volleyball. Taking part in volunteer and social community activities.",
         },
         {
-          id: 2,
+          id: 4,
           content:
             "My objectives are Looking  for  a  suitable  position  in  a  IT  or  programming-related  environment  so  as  to  widen  computer knowledge, gain practical experience, deepen the passion and get ready for future professional programming.",
         },
       ],
       publicPath: process.env.BASE_URL,
+
+      contacts: [
+        {
+          id: 1,
+          name: "Thanh Pho Vinh - Nghe An",
+          image: "location",
+          link: "",
+        },
+        {
+          id: 2,
+          name: "+84983839572",
+          image: "phone",
+          link: "",
+        },
+        {
+          id: 3,
+          name: "thiengat1@gmail.com",
+          image: "mail",
+          link: "https://mail.google.com/mail/u/0/#inbox",
+        },
+        {
+          id: 4,
+          name: "https://nguyenvanthien.herokuapp.com",
+          image: "web",
+          link: "https://nguyenvanthien.herokuapp.com/",
+        },
+      ],
     };
   },
   methods: {
@@ -126,7 +156,7 @@ export default {
     padding: 40px;
     .my-cv {
       margin-top: 40px;
-      width: 90px;
+      width: 150px;
       height: 35px;
       background: #16a085;
       border-radius: 4px;
@@ -185,6 +215,9 @@ export default {
     color: #32323a;
     margin-top: 0;
     margin-bottom: 30px;
+  }
+  .chinese-cv{
+    margin-left: 10px;
   }
 }
 </style>

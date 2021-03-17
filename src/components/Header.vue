@@ -9,34 +9,14 @@
       </div>
       <div class="social-link">
         <ul class="social-menu">
-          <li class="social-icon">
-            <a href="https://www.facebook.com/thien.nguyenvan.353">
-              <img src="../assets/facebook.png" width="30" height="30" />
-              <span>Facebook</span>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="https://www.linkedin.com/in/nguyen-van-thien-ba7b6a1aa/">
-              <img src="../assets/linkin.png" width="30" height="30" />
-              <span>Linkedin</span>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="https://github.com/thiengat1">
-              <img src="../assets/github2.png" width="30" height="30" />
-              <span>Github</span>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="https://mail.google.com/mail/u/0/#inbox">
-              <img src="../assets/gmail.png" width="30" height="30" />
-              <span>Gmail</span>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="https://nguyenvanthien.herokuapp.com/">
-              <img src="../assets/web2.png" width="30" height="30" />
-              <span>Web</span>
+          <li class="social-icon" v-for="social in socialData" :key="social.id">
+            <a :href="social.link">
+              <img
+                :src="require(`../assets/${social.image}.png`)"
+                width="30"
+                height="30"
+              />
+              <span>{{ social.name }}</span>
             </a>
           </li>
         </ul>
@@ -47,6 +27,37 @@
 
 <script>
 export default {
+  name: "Header",
+  data() {
+    return {
+      socialData: [
+        {
+          id: 1,
+          name: "Facebook",
+          image: "facebook",
+          link: "https://www.facebook.com/thien.nguyenvan.353",
+        },
+        {
+          id: 2,
+          name: "Linkedin",
+          image: "linkin",
+          link: "https://www.linkedin.com/in/nguyen-van-thien-ba7b6a1aa/",
+        },
+        {
+          id: 3,
+          name: "Gmail",
+          image: "gmail",
+          link: "https://github.com/thiengat1",
+        },
+        {
+          id: 4,
+          name: "Web",
+          image: "web2",
+          link: "https://nguyenvanthien.herokuapp.com/",
+        },
+      ],
+    };
+  },
   computed: {
     socialLink() {
       return this.$store.state.socialLink;
@@ -142,7 +153,7 @@ export default {
       .social-icon a:hover span {
         opacity: 1;
         overflow: visible;
-        margin: -50px 0;
+        margin-top: -100px;
         transition: 0.5s;
         transition-property: opacity;
       }

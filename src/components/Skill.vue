@@ -50,6 +50,7 @@
 
 <script>
 export default {
+  name:"Skill",
   data() {
     return {
       program: [
@@ -63,7 +64,7 @@ export default {
         { id: 2, name: "jQuery / Bootstrap / LayUI" },
         { id: 3, name: "PHP-Yii2" },
         { id: 4, name: "Express JS" },
-        { id: 4, name: "React Native" },
+        { id: 5, name: "React Native" },
       ],
       database: [
         { id: 1, name: "MySQL" },

@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: Lewis
+ * @Date: 2021-03-17 17:13:19
+ * @LastEditTime: 2021-03-17 18:09:18
+ * @LastEditors: Lewis
+-->
 <template>
   <div class="education-detail" id="education">
     <div class="section-header">
@@ -21,7 +28,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name:'Education'
+};
 </script>
 
 <style lang="scss" scoped>
