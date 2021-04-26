@@ -28,40 +28,51 @@ export default {
   name:'Navbar',
   data(){
     return{
-        menuList: [
+       
+    }
+  },
+  computed: {
+     menuList(){
+       return [
         {
           id: 1,
-          name: "Home",
+          name: this.$t("Home"),
           image: "home",
           link: "#home",
         },
         {
           id: 2,
-          name: "About",
+          name: this.$t("About"),
           image: "about",
           link: "#about",
         },
         {
           id: 3,
-          name: "Skill",
+          name: this.$t("Skill"),
           image: "skill",
           link: "#skill",
         },
         {
           id: 4,
-          name: "Experience",
+          name: this.$t("Experience"),
           image: "experience",
           link: "#experience",
         },
          {
+          id: 4,
+          name: this.$t("project"),
+          image: "experience",
+          link: "#project",
+        },
+         {
           id: 5,
-          name: "Education",
+          name: this.$t("Education"),
           image: "education",
           link: "#education",
         },
-      ],
-    }
-  }
+      ]
+     } 
+  },
 };
 </script>
 

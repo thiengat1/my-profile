@@ -1,14 +1,14 @@
 <!--
- * @Description: 
+ * @Description: 学历
  * @Author: Lewis
  * @Date: 2021-03-17 17:13:19
- * @LastEditTime: 2021-03-17 18:09:18
+ * @LastEditTime: 2021-04-21 17:02:30
  * @LastEditors: Lewis
 -->
 <template>
   <div class="education-detail" id="education">
     <div class="section-header">
-      <h2>Education</h2>
+      <h2>{{$t('Education')}}</h2>
     </div>
     <div class="row education-item">
       <div
@@ -19,8 +19,8 @@
           <p>-</p>
           <p>2011</p>
         </div>
-        <h2>BACHELOR DEGREE</h2>
-        <p>da nang university of technology, viet nam</p>
+        <h2>{{$t('degree')}}</h2>
+        <p>{{$t('university')}}</p>
         <hr />
       </div>
     </div>

@@ -1,11 +1,30 @@
+<!--
+ * @Description: 头像
+ * @Author: Lewis
+ * @Date: 2021-03-17 17:13:19
+ * @LastEditTime: 2021-04-21 17:05:21
+ * @LastEditors: Lewis
+-->
 <template>
   <div class="header-container" id="home">
     <div class="container">
+      <div class="language">
+        <select v-model="language" class="language-select form-control" @change="handleChangeLanguage">
+          <option
+            class="language-select-option"
+            v-for="(lang, index) in languageOptions"
+            :key="index"
+            :value="lang.id"
+          >
+            <span>{{ lang.name }}</span>
+          </option>
+        </select>
+      </div>
       <div class="site-title">
-        <h1 class="site-name">i'm nguyen van thien</h1>
+        <h1 class="site-name">{{$t('myName')}}</h1>
       </div>
       <div class="site-slogan">
-        <h3 class="site-slogan-name">a frontend developer</h3>
+        <h3 class="site-slogan-name">{{$t('myCarrier')}}</h3>
       </div>
       <div class="social-link">
         <ul class="social-menu">
@@ -26,10 +45,12 @@
 </template>
 
 <script>
+import {mapActions,mapGetters} from 'vuex'
 export default {
   name: "Header",
   data() {
     return {
+      language:this.lang||'zh',
       socialData: [
         {
           id: 1,
@@ -59,8 +80,20 @@ export default {
     };
   },
   computed: {
-    socialLink() {
-      return this.$store.state.socialLink;
+    ...mapGetters({lang:'language'}),
+    languageOptions() {
+      return [
+        { id: "en", name: "English" },
+        { id: "zh", name: "中文" },
+      ];
+    },
+  },
+  methods: {
+    ...mapActions({setSelectLanguage:'setSelectLanguage'}),
+    handleChangeLanguage(key) {
+      let lang=key.target.value
+       this.$i18n.locale=lang
+      this.setSelectLanguage(lang)
     },
   },
 };
@@ -171,6 +204,20 @@ export default {
       h3 {
         font-size: 18px !important;
       }
+    }
+  }
+  .language {
+    height: 30px;
+    position: fixed;
+    right: 30px;
+    top:20px;
+    z-index: 1000;
+    &-select {
+      height: 100%;
+      padding: 0px 10px;
+     font-size: 16px;
+     font-weight: 700;
+     //border: 2px solid brown;
     }
   }
 }

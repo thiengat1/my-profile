@@ -1,7 +1,14 @@
+<!--
+ * @Description: 经验
+ * @Author: Lewis
+ * @Date: 2021-03-17 17:13:19
+ * @LastEditTime: 2021-04-21 17:03:15
+ * @LastEditors: Lewis
+-->
 <template>
   <div class="experience-container" id="experience">
     <div class="section-header">
-      <h2>Experiences</h2>
+      <h2>{{ $t("Experiences") }}</h2>
     </div>
     <div class="row experience-detail">
       <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 experience">
@@ -9,16 +16,16 @@
           <div
             class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 name-designation"
           >
-            <h3 class="designation">frontend developer</h3>
+            <h3 class="designation">{{ $t("positionCurrent") }}</h3>
             <p class="name-of-org">
-              SOMI UNLIMITED SOLUTIONS, INC company (philippines)
+              {{ $t("companyCurrent") }}
             </p>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
             <div class="stay-time stay-time-color">
               <p>12/2018</p>
               <p>-</p>
-              <p>present</p>
+              <p>{{ $t("present") }}</p>
             </div>
           </div>
           <div
@@ -36,8 +43,8 @@
       <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 experience">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 name-designation">
-            <h3 class="designation">it engineer</h3>
-            <p class="name-of-org">formosa ha tinh steel company</p>
+            <h3 class="designation">{{ $t("position1") }}</h3>
+            <p class="name-of-org">{{ $t("company1") }}</p>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2">
             <div class="stay-time">
@@ -47,7 +54,7 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 experience-sum">
-            <span>Responsiblities:</span>
+            <span>{{ $t("Responsibilities") }}</span>
             <ul>
               <li v-for="item in experience1" :key="item.id">
                 {{ item.name }}
@@ -62,70 +69,56 @@
 
 <script>
 export default {
-   name:'Experiences',
+  name: "Experiences",
   data() {
-    return {
-      experience1: [
+    return {};
+  },
+  computed: {
+    experience1() {
+      return [
+        { id: 1, name: this.$t("experience1Content1") },
+        { id: 2, name: this.$t("experience1Content2") },
+        { id: 3, name: this.$t("experience1Content3") },
+        { id: 4, name: this.$t("experience1Content4") },
+        { id: 5, name: this.$t("experience1Content5") },
+        { id: 6, name: this.$t("experience1Content6") },
+        { id: 7, name: this.$t("experience1Content7") },
+      ];
+    },
+    experience2() {
+      return [
         {
           id: 1,
-          name:
-            "Manage and troubleshoot Long Product System application. Use C#/C++ to develop  local applications to support other steel making departments. ",
+          title: this.$t("experience2Title1"),
+          name: this.$t("experience2Content1"),
         },
         {
           id: 2,
-          name:
-            "Coordinate with other departments and other relevant people to know the process  and customize the system to support operations.",
+          title: this.$t("experience2Title2"),
+          name: this.$t("experience2Content2"),
         },
-        { id: 3, name: "Troubleshoot any issues related to application.. " },
+        {
+          id: 3,
+          title: this.$t("experience2Title3"),
+          name: this.$t("experience2Content3"),
+        },
         {
           id: 4,
-          name:
-            "Create or modify reports in Chinese and English in accordance with user  requirements. ",
+          title: this.$t("experience2Title4"),
+          name: this.$t("experience2Content4"),
         },
         {
           id: 5,
-          name:
-            "Analyze application to fix bugs and improve application to support business. ",
+          title: this.$t("experience2Title5"),
+          name: this.$t("experience2Content5"),
         },
         {
           id: 6,
-          name:
-            "Test and implement new features or new requests for Production management system. ",
+          title: this.$t("experience2Title6"),
+          name: this.$t("experience2Content6"),
         },
-        {
-          id: 7,
-          name:
-            "Be in charge of training new members of IT Department about Steel making and  programming knowledge. ",
-        },
-      ],
-      experience2: [
-        { id: 1, title: "Project: ", name: "Employment Managemant System." },
-        {
-          id: 2,
-          title: "Project Description: ",
-          name:
-            "Building a staff management system, including employee information management, leave management, work schedule management, financial management, flow management, etc.",
-        },
-        { id: 3, title: "Team Size: ", name: "7." },
-        {
-          id: 4,
-          title: "Responsiblities: ",
-          name:
-            "Responsible of frondent develop using Vue Js framework to build the assigned modules. Maintain old modules and update new requirements.",
-        },
-        {
-          id: 5,
-          title: "Accomplishments: ",
-          name:
-            "Learned  Vue Js Framework, Improved teamwork and communication skills, Learned MVC architectural.",
-        },
-        {
-          id: 6,
-          title: "Technologies: ",
-          name: "Frontend: Vue Js, Backend: PHP-Laravel.",
-        },
-      ],
-    };
+      ];
+    },
   },
 };
 </script>
@@ -136,11 +129,13 @@ export default {
 .experience-detail {
   display: flex;
   justify-content: center;
+
   .experience {
     height: auto;
     background: #fff;
     margin-bottom: 30px;
     padding: 30px;
+
     .stay-time {
       display: flex;
       flex-direction: column;

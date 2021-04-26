@@ -1,7 +1,15 @@
+<!--
+ * @Description: 个人介绍
+ * @Author: Lewis
+ * @Date: 2021-03-17 17:13:19
+ * @LastEditTime: 2021-04-21 17:05:04
+ * @LastEditors: Lewis
+-->
+
 <template>
   <div class="about-container" id="about">
     <div class="section-header">
-      <h2>About Me</h2>
+      <h2>{{ $t("aboutMe") }}</h2>
     </div>
     <div class="about-body-container">
       <div class="row about-body">
@@ -10,17 +18,17 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 my-summary">
           <div class="summary-detail">
-            <h2>summary</h2>
+            <h2>{{ $t("summary") }}</h2>
             <p v-for="item in summary" :key="item.id">{{ item.content }}</p>
 
-            <div style="display:flex">
+            <div style="display: flex;">
               <div class="my-cv english-cv">
                 <a :href="`${publicPath}nguyenvanthien_profile_en.pdf`" download
                   ><img
                     src="../assets/download.png"
                     width="30"
                     height="30"
-                  /><span>My English CV</span></a
+                  /><span>{{$t('myEnglishCv')}}</span></a
                 >
               </div>
               <div class="my-cv chinese-cv">
@@ -29,7 +37,7 @@
                     src="../assets/download.png"
                     width="30"
                     height="30"
-                  /><span>My Chinese CV</span></a
+                  /><span>{{$t('myChineseCv')}}</span></a
                 >
               </div>
             </div>
@@ -37,7 +45,7 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 my-contact">
           <div class="contact-detail">
-            <h2>contact info</h2>
+            <h2>{{$t('contactInfo')}}</h2>
             <ul class="contact-list">
               <li v-for="contact in contacts" :key="contact.id">
                 <img
@@ -46,7 +54,7 @@
                   height="20"
                 />
                 <a v-if="contact.link" :href="contact.link">
-                   <span>{{ contact.name }}</span>
+                  <span>{{ contact.name }}</span>
                 </a>
                 <span v-else>{{ contact.name }}</span>
               </li>
@@ -59,33 +67,10 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
-  name:'AboutMe',
+  name: "AboutMe",
   data() {
     return {
-      summary: [
-        {
-          id: 1,
-          content:
-            "I'm Nguyen Van Thien, Passionate front-end web developer with 2 years of experience using JavaScript, HTML5, and CSS to build all aspects of the user experience and user interface for client-facing landing pages. Specializes in using jQuery and Vue Js to build e-commerce sites.",
-        },
-        {
-          id: 2,
-          content:
-            "Learning	new	language and technologies is what I	am passionate about. I am considered a team-player	because	I like to help other and tend to work well within the group.",
-        },
-        {
-          id: 3,
-          content:
-            "I like Traveling, reading book, playing football and volleyball. Taking part in volunteer and social community activities.",
-        },
-        {
-          id: 4,
-          content:
-            "My objectives are Looking  for  a  suitable  position  in  a  IT  or  programming-related  environment  so  as  to  widen  computer knowledge, gain practical experience, deepen the passion and get ready for future professional programming.",
-        },
-      ],
       publicPath: process.env.BASE_URL,
 
       contacts: [
@@ -116,23 +101,29 @@ export default {
       ],
     };
   },
-  methods: {
-    downloadWithAxios() {
-      axios({
-        url: "../assets/nguyenvanthien.pdf",
-        method: "GET",
-        responseType: "blob",
-      }).then((response) => {
-        var fileURL = window.URL.createObjectURL(new Blob([response.data]));
-        var fileLink = document.createElement("a");
-
-        fileLink.href = fileURL;
-        fileLink.setAttribute("download", "file.pdf");
-        document.body.appendChild(fileLink);
-        fileLink.click();
-      });
+  computed: {
+    summary() {
+      return [
+        {
+          id: 1,
+          content: this.$t("content1"),
+        },
+        {
+          id: 2,
+          content: this.$t("content2"),
+        },
+        {
+          id: 3,
+          content: this.$t("content3"),
+        },
+        {
+          id: 4,
+          content: this.$t("content4"),
+        },
+      ];
     },
   },
+  methods: {},
 };
 </script>
 
@@ -216,7 +207,7 @@ export default {
     margin-top: 0;
     margin-bottom: 30px;
   }
-  .chinese-cv{
+  .chinese-cv {
     margin-left: 10px;
   }
 }

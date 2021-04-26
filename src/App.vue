@@ -5,6 +5,7 @@
     <AboutMe />
     <Skill />
     <Experiences />
+    <Project />
     <Education />
   </div>
 </template>
@@ -16,6 +17,7 @@ import Navbar from "./components/Navbar";
 import Skill from "./components/Skill";
 import Experiences from "./components/Experiences";
 import Education from "./components/Education";
+import Project from "./components/Project";
 export default {
   name: "App",
   components: {
@@ -25,6 +27,7 @@ export default {
     Skill,
     Experiences,
     Education,
+    Project,
   },
 };
 </script>

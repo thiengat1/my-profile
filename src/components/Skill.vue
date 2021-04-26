@@ -1,47 +1,56 @@
+<!--
+ * @Description: 技术
+ * @Author: Lewis
+ * @Date: 2021-03-17 17:13:19
+ * @LastEditTime: 2021-04-26 10:58:41
+ * @LastEditors: Lewis
+-->
 <template>
   <div class="skill-container" id="skill">
     <div class="section-header">
-      <h2>skills</h2>
+      <h2>{{ $t("skills") }}</h2>
     </div>
     <div>
       <div class="row skill-detail">
-        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 skill">
-          <h2>PROGRAMMING LANGUAGES</h2>
-          <ul>
-            <li v-for="item in program" :key="item.id">{{ item.name }}</li>
-          </ul>
-          <h2>FRAMEWORKS & PLATFORMS</h2>
-          <ul>
-            <li v-for="item in frameWork" :key="item.id">{{ item.name }}</li>
-          </ul>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 skill">
-          <h2>DATABASE</h2>
-          <ul>
-            <li v-for="item in database" :key="item.id">{{ item.name }}</li>
-          </ul>
-          <h2>VERSION CONTROL</h2>
-          <ul>
-            <li v-for="item in versionControl" :key="item.id">
-              {{ item.name }}
-            </li>
-          </ul>
-          <h2>IDE</h2>
-          <ul>
-            <li v-for="item in ide" :key="item.id">{{ item.name }}</li>
-          </ul>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 skill">
-          <h2>FOREIGN LANGUAGE</h2>
-          <ul>
-            <li v-for="item in foriegnLanguage" :key="item.id">
-              {{ item.name }}
-            </li>
-          </ul>
-          <h2>KNOWLEDGE</h2>
-          <ul>
-            <li v-for="item in knowledge" :key="item.id">{{ item.name }}</li>
-          </ul>
+        <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 skill-detail-width">
+          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 skill">
+            <h2>{{ $t("programing") }}</h2>
+            <ul>
+              <li v-for="item in program" :key="item.id">{{ item.name }}</li>
+            </ul>
+            <h2>{{ $t("frameworks") }}</h2>
+            <ul>
+              <li v-for="item in frameWork" :key="item.id">{{ item.name }}</li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 skill">
+            <h2>{{ $t("database") }}</h2>
+            <ul>
+              <li v-for="item in database" :key="item.id">{{ item.name }}</li>
+            </ul>
+            <h2>{{ $t("versionControl") }}</h2>
+            <ul>
+              <li v-for="item in versionControl" :key="item.id">
+                {{ item.name }}
+              </li>
+            </ul>
+            <h2>{{ $t("ide") }}</h2>
+            <ul>
+              <li v-for="item in ide" :key="item.id">{{ item.name }}</li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 skill">
+            <h2>{{ $t("language") }}</h2>
+            <ul>
+              <li v-for="item in foriegnLanguage" :key="item.id">
+                {{ item.name }}
+              </li>
+            </ul>
+            <h2>{{ $t("knowledge") }}</h2>
+            <ul>
+              <li v-for="item in knowledge" :key="item.id">{{ item.name }}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -50,7 +59,7 @@
 
 <script>
 export default {
-  name:"Skill",
+  name: "Skill",
   data() {
     return {
       program: [
@@ -81,33 +90,25 @@ export default {
         { id: 2, name: "Visual Code" },
         { id: 3, name: "Microsoft Visual Studio" },
       ],
-      foriegnLanguage: [
-        { id: 1, name: "Good In Chinese (HSK5)" },
-        { id: 2, name: "Intermediate English Level" },
-      ],
-      knowledge: [
-        { id: 1, name: "Good knowledge in OOP." },
-        {
-          id: 2,
-          name: "Good understanding software design, database design...",
-        },
-        {
-          id: 3,
-          name: "Good time management, presentation and teamwork skills ...",
-        },
-        { id: 4, name: "Presentation, communication and persuasion." },
-        {
-          id: 5,
-          name:
-            "Capability of working independently, working in group, work under-pressure and self-control.",
-        },
-        {
-          id: 6,
-          name:
-            "Hard working, willing to learn, careful, patient, responsible and reliable.",
-        },
-      ],
     };
+  },
+  computed: {
+    knowledge() {
+      return [
+        { id: 1, name: this.$t("knowledge1") },
+        { id: 2, name: this.$t("knowledge2") },
+        { id: 3, name: this.$t("knowledge3") },
+        { id: 4, name: this.$t("knowledge4") },
+        { id: 5, name: this.$t("knowledge5") },
+        { id: 6, name: this.$t("knowledge6") },
+      ];
+    },
+    foriegnLanguage() {
+      return [
+        { id: 1, name: this.$t("chineseLanguage") },
+        { id: 2, name: this.$t("englishLanguage") },
+      ];
+    },
   },
 };
 </script>
@@ -117,16 +118,22 @@ export default {
 .skill-detail {
   display: flex;
   justify-content: space-evenly;
-  .skill {
-    height: auto;
-    background: #fff;
-    padding: 30px;
-    h2 {
-      font-size: 18px;
-      font-weight: normal;
-      text-transform: uppercase;
-      margin-top: 0;
-      color: #32323a;
+  .skill-detail-width {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    flex-wrap: wrap;
+    .skill {
+      height: auto;
+      background: #fff;
+      padding: 30px;
+      h2 {
+        font-size: 18px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-top: 0;
+        color: #32323a;
+      }
     }
   }
 }
