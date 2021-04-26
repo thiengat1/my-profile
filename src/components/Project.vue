@@ -2,7 +2,7 @@
  * @Description: 转案
  * @Author: Lewis
  * @Date: 2021-04-21 15:32:52
- * @LastEditTime: 2021-04-26 10:32:47
+ * @LastEditTime: 2021-04-26 14:43:30
  * @LastEditors: Lewis
 -->
 <template>
@@ -97,14 +97,14 @@ export default {
     flex-direction: column;
     h2 {
       font-size: 18px;
-      font-weight: normal;
+      font-weight: bold;
       text-transform: uppercase;
       text-align: center;
       margin-top: 0;
       color: #32323a;
     }
     .text-style{
-      font-weight: bold;
+      font-weight: 400;
       span{
           font-weight: normal;
       }
